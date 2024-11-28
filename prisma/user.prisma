@@ -1,0 +1,10 @@
+model User {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  username   String   @unique
+  password   String
+  rooms      Room[]   @relation(fields: [room_ids], references: [id])
+  room_ids   String[] @db.ObjectId
+  created_at DateTime @default(now())
+
+  @@map("users")
+}

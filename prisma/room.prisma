@@ -1,0 +1,9 @@
+model Room {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  identifier String   @unique
+  users      User[]   @relation(fields: [user_ids], references: [id])
+  user_ids   String[] @db.ObjectId
+  created_at DateTime @default(now())
+
+  @@map("rooms")
+}

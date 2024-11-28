@@ -1,0 +1,55 @@
+{
+  "name": "novin-dev-chat",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "build": "nest build",
+    "fl": "biome check --write \"./src\"",
+    "dev": "nest start --watch --type-check --exec=\"node --experimental-require-module\"",
+    "start": "node --experimental-require-module dist/main",
+    "tc": "tsc",
+    "tcw": "tsc -w",
+    "pg": "prisma generate --no-hints",
+    "pdp": "prisma db push --skip-generate"
+  },
+  "dependencies": {
+    "@fastify/helmet": "^11.1.1",
+    "@nestjs/common": "^10.4.9",
+    "@nestjs/config": "^3.3.0",
+    "@nestjs/core": "^10.4.9",
+    "@nestjs/platform-fastify": "^10.4.9",
+    "@nestjs/platform-socket.io": "^10.4.9",
+    "@nestjs/websockets": "^10.4.9",
+    "@prisma/client": "^5.22.0",
+    "bcrypt": "^5.1.1",
+    "fastify": "4.28.1",
+    "jsonwebtoken": "^9.0.2",
+    "nanoid": "^5.0.9",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.1",
+    "socket.io": "^4.8.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@nestjs/cli": "^10.4.8",
+    "@swc/cli": "^0.5.1",
+    "@swc/core": "^1.9.3",
+    "@types/bcrypt": "^5.0.2",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/node": "^20.17.8",
+    "prisma": "^5.22.0",
+    "source-map-support": "^0.5.21",
+    "typescript": "^5.7.2"
+  },
+  "prisma": {
+    "schema": "prisma"
+  },
+  "packageManager": "pnpm@9.14.2",
+  "pnpm": {
+    "executionEnv": {
+      "nodeVersion": "20.18.1"
+    }
+  }
+}
